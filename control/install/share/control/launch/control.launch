@@ -1,0 +1,7 @@
+<launch>
+  <arg name="respawn" default="true"/>
+  <arg name="respawn_delay" default="0.05"/>
+  <node pkg = "control" type="control" name="control" output="screen">
+     <param name ="conf_path" type="string" value="$(find control)/cfg/control.yaml"/>
+  </node>
+</launch>

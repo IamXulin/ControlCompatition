@@ -1,0 +1,5 @@
+<launch>
+  <node pkg = "control" type="xiankong" name="xiankong" output="screen">
+    <param name ="cfg_path" type="string" value="$(find control)/cfg/"/>
+  </node>
+</launch>

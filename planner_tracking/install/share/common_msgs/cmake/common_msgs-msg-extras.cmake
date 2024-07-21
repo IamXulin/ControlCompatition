@@ -1,0 +1,2 @@
+set(common_msgs_MESSAGE_FILES "msg/FaultInfo.msg;msg/FaultVec.msg;msg/Header.msg;msg/TimeStatistics.msg;msg/TimeStatus.msg;msg/DRPoseWithTime.msg;msg/EulerWithCovariance.msg;msg/LLH.msg;msg/NavStatus.msg;msg/Pose.msg;msg/PoseEuler.msg;msg/PoseQuaternion.msg;msg/Quaternion.msg;msg/TimeStatistics.msg;msg/TimeStatus.msg;msg/Twist.msg;msg/UnsureVar.msg;msg/Vector3.msg;msg/Vector3WithCovariance.msg;msg/CalibrationResult.msg;msg/LidarCalibrationResult.msg;msg/UdpMsg.msg")
+set(common_msgs_SERVICE_FILES "")

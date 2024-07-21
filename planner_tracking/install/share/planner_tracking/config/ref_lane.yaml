@@ -1,0 +1,15 @@
+sample_interval: 0.5
+sample_points_num: 40
+reference_interval: 0.5
+distance_to_find_lanes: 6.0
+
+left_road_b: 3.0
+left_lane_b: 3.0
+right_road_b: 3.0
+right_lane_b: 3.0
+left_avilable: false
+right_avilable: false
+
+weight_fem_pos_deviation: 1e10 # more big more smooth  10
+weight_path_length: 1.0        #                       0.005
+weight_ref_deviation: 1.0      #                       0.005

@@ -1,0 +1,7 @@
+<launch>
+  <node pkg = "planning_rviz" type="planning_rviz" name="planning_rviz" output="screen">
+    <param name ="config_path" type="string" value="$(find planning_rviz)/config/config.yaml"/>
+    <param name ="data_path" type="string" value="$(find planning_rviz)/config/path.csv"/>
+    <param name ="map_path" type="string" value="$(find planning_rviz)/map_file/map_xingtai.bin"/>
+  </node>
+</launch>

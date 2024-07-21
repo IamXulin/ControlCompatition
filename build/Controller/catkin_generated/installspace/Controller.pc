@@ -1,0 +1,8 @@
+prefix=/home/xulin/ControlCompetion/install
+
+Name: Controller
+Description: Description of Controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

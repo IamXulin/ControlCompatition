@@ -1,0 +1,8 @@
+prefix=/home/server/ac2024/20240318/planner_tracking/install
+
+Name: planner_tracking
+Description: Description of planner_tracking
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs geometry_msgs message_runtime

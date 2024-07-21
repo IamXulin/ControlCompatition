@@ -1,0 +1,8 @@
+prefix=/home/server/2024ac/catkin_board/install
+
+Name: control
+Description: Description of control
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy dynamic_reconfigure std_msgs geometry_msgs message_runtime vehicle_msgs

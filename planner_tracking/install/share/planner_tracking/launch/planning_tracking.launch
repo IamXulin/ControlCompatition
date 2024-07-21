@@ -1,0 +1,6 @@
+<launch>
+  <node pkg = "planner_tracking" type="planner_tracking" name="planner_tracking" output="screen">
+    <param name ="map_path" type="string" value="$(find planner_tracking)/config/A.csv"/>
+    <param name ="reference_config_path" type="string" value="$(find planner_tracking)/config/ref_lane.yaml"/>
+  </node>
+</launch>

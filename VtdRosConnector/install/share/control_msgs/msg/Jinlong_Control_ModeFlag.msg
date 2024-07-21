@@ -1,0 +1,8 @@
+Header header
+int16 auto_start_flag
+int16 strg_workmode
+int16 current_light_status
+int16 vehicle_current_gear
+int16 longitude_control_mode
+int16 Auto_mode
+int16 sts_auto

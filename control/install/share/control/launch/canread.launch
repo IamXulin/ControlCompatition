@@ -1,0 +1,4 @@
+<launch>
+  <node pkg = "control" type="canread" name="canread" output="screen">
+  </node>
+</launch>

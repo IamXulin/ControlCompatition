@@ -1,0 +1,6 @@
+<launch>
+    <arg name="respawn" default="true"/>
+    <arg name="respawn_delay" default="0.5"/>
+    <param name="enableCarsim" value="false"/>
+    <node pkg="rosToVtd" name="rosToVtd" type="rosToVtd" respawn="$(arg respawn)" respawn_delay="$(arg respawn_delay)" output="screen"/>
+</launch>

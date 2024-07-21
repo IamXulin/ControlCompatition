@@ -1,0 +1,198 @@
+vision: v2.0
+
+debug_mode: true
+sub_topic_name:
+        localization: cicv_location
+        trajectory: cicv_amr_trajectory
+        faultinfo: nodefault_info
+        diagnosis: fault_alarm
+        udp: udp_evican
+calibration:
+        throttle: [50, 60, 80, 100, 120]          #油门开度
+        acc: [0, 0.015, 0.08, 0.15, 0.25]           #油门开度对应的加速度
+        brk: [0, 5, 10, 12, 14, 15, 16, 17, 18, 20, 25, 30]     #刹车开度
+        dec: [0, -0.25, -0.5, -0.8, -1.2, -1.4, -1.7, -1.9, -2.1, -2.3, -3.0, -4.0]     #刹车开度对应的减速度
+        brake: -50
+jinlong_calibration:
+        jinlong_brk_accel: [-1.97, -3.23, -7.46, -9.36, -12.97, -15.84, -16.73, -20.90]
+        jinlong_brk: [3, 5, 10, 15, 20, 25, 30, 35]
+        jinlong_crawl_accel: [0.57, 1.14, 1.85, 3.08, 3.64, 4.21, 4.88, 5.94, 6.6]	
+        jinlong_crawl_throttle: [4, 6, 8, 10, 12, 14, 16, 18, 25]	
+        jinlong_spdon_accel: [1.37, 2.78, 4.17, 5.56, 6.94, 8.33, 13.89]	
+        jinlong_spdon_throttle: [4, 4, 4.5, 4.9, 5, 6, 8]	
+aeb: 50
+aeb_threshold: 20
+emergency_stop: 20
+emergency_stop_threshold: 20
+stop: 10
+stop_step_size: 25
+low_threshold: 12
+high_threshold: 26
+brk_value: 2
+brk_a_f: 2.0            #行进间刹车强度系数
+launch_throttle: 15     #金龙油门开度
+num_extended_points: 10
+strg_limit_avp: 8.0   # 方向盘转角增量限制
+steering_spd: 300
+warm_up_accel_pos: 15
+start_up_accel_pos: 15
+
+preview_point_move_size_long: 10
+preview_point_move_size_short: 4  # 低速下的预瞄点个数
+# launch_throttle: 80     #金龙油门开度
+# warm_up_accel_pos: 80
+# start_up_accel_pos: 80
+# 2024.2.22 添加
+accel_pedal_compensation: 50
+speed_down_brk_pos: 15
+msg_lost_stop_low_brk_pos: 10 #10
+spd_limit: 43
+pre_acc_factor: 15 #15
+heading_error_factor: 0.0
+wheelangle_error: 10
+crawl_velocity: 1.5
+
+acc_limit: 0.05
+crawl_brk_min: 3
+preview_dis_factor: 1.0
+wheel_angle_factor: 5 #转角增量限制
+whlagle_thd_factor: 1.75
+super_start_throttle: 45
+
+aeb_history_count: 50
+preview_point_10: 9 #12
+# preview_factor_20: 1.7 #2.0
+# preview_factor_30: 1.7
+# 2024.2.22 修改
+preview_factor_20: 1.1 #2.0
+preview_factor_30: 1.1
+preview_factor_40: 1.5
+preview_factor_other: 1.5
+
+longitude_preview_point_10: 5
+longitude_preview_factor_20: 1
+longitude_preview_factor_30: 1
+longitude_preview_factor_40: 1
+longitude_preview_factor_other: 4.0
+
+
+
+k_heading_error: 100
+
+steering_zero: 0 #2024.2.23
+crawl_aeb_brk: 10
+park_brk_value: 20
+nearest_point_curvity: 0.05
+
+can_fault_code: 0x4000
+input_fault_code: 0x3210
+
+trajectory_lost_count: 35
+speed_on_error: 0.2
+speed_on_brk_max: 10
+
+longitude:
+  v_erro_deadzone: 0.2
+  switch_speed: 2.7
+  stop_avp_shift: 15
+  start_up_throttle: 10
+  throttle_max: 50
+  brk_history_count: 30
+  station_error_limit: 0.5
+  speed_controller_input_limit: 2.0
+  stop_aeb_high: 22
+  stop_aeb_low: 20
+  spd_classification_brk: 1.37
+  stop_msgs_lost: 15
+
+rosbag_test_flag: true
+
+pid_crawl:
+        integrator_enable: 1
+        integrator_saturation_level: 2.5
+        output_saturation_level: 7.0
+        kp: 3.5
+        ki: 0.5
+        kd: 0
+        kaw: 0
+pid_spdon:
+        integrator_enable: 1
+        integrator_saturation_level: 2.5
+        output_saturation_level: 7.0
+        kp: 3.9 #3.6
+        ki: 0.5
+        kd: 0
+        kaw: 0
+pid_hor:
+        kp: 0.35
+        ki: 0.015
+        kd: 0
+        outputMax: 2.5
+pid_ver:
+        integrator_enable: 1
+        integrator_saturation_level: 0.3
+        output_saturation_level: 0.4
+        kp: 0.05
+        ki: 0.01
+        kd: 0
+        kaw: 0
+pid_brake:
+        integrator_enable: 1
+        integrator_saturation_level: 0.3
+        output_saturation_level: 10
+        kp: 2
+        ki: 0.01
+        kd: 0
+        kaw: 0
+pid_brdown:
+        integrator_enable: 1
+        integrator_saturation_level: 0.3
+        output_saturation_level: 100
+        kp: 15 
+        ki: 0.5
+        kd: 0.01
+        kaw: 0
+pid_steer:
+        integrator_enable: 1
+        integrator_saturation_level: 0.3
+        output_saturation_level: 0.1
+        kp: 0.05
+        ki: 0.01
+        kd: 0
+        kaw: 0
+vehicle_param:
+        v_max: 15.0
+        wheelbase: 3.8
+        steer_ratio: 19.0 #21.7
+        steer_k: 400
+        steer_speed_ratio: 30
+        steer_bias: 18
+gear:
+        i_1: 8.39
+        i_2: 3.54
+        i_3: 1.74
+        i_4: 1
+        gear_efficiency: 0.5
+control:
+        preview_point_move_size_normal: 12
+        preview_point_move_size_terminal: 18
+        frequency: 100
+        pre_omega_weight: 0.1
+        now_omega_weight: 0.9
+        pre_vel_weight: 0.5
+        now_vel_weight: 0.5
+obu:
+        AS_adVersionLength_yaml: 9
+        AS_adVersion_year_n1: 50
+        AS_adVersion_year_n2: 48
+        AS_adVersion_year_n3: 50
+        AS_adVersion_year_n4: 51
+        AS_adVersion_month: 57
+        AS_adVersion_day: 49
+        AS_adVersion_hour: 48
+        AS_adVersion_minute: 48
+        system_failure: 1
+        collision_risk: 2   
+flags:
+  lon:
+    query_forward_time_point_only: false

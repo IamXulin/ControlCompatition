@@ -1,0 +1,12 @@
+<launch>
+    <param name="sensorNum" value="2"/>
+    <param name="sensorPort_1" value="62001"/>
+    <param name="sensorPort_2" value="62002"/>
+    <param name="sensorPort_1_type" value="1"/>
+    <param name="sensorPort_2_type" value="2"/>
+    <arg name="respawn" default="true"/>
+    <arg name="respawn_delay" default="0.01"/>
+    <node pkg="vtdToRos" name="vtdToRos" type="vtdToRos" respawn="$(arg respawn)" respawn_delay="$(arg respawn_delay)" output="screen">
+    <!-- <node pkg="vtdToRos" name="vtdToRos" type="vtdToRos" output="screen"> -->
+    </node>
+</launch>

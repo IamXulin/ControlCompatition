@@ -1,0 +1,22 @@
+vision: v1.0
+
+Can_371:
+        Adas_BrakeEnable: 0
+        Adas_ControlMode: 0
+        Adas_DriveEnable: 0
+        Adas_GearEnable: 0
+        Adas_ParkEnable: 0
+        Adas_StringMode: 0
+        Adas_TargetBrakePret: 30
+        Adas_TargetMotTq: 70
+        Adas_TargetStringAngl: 360
+        Adas_TargetStringSpd: 900
+Can_372:
+        Adas_F_FogLgtCmd: 1
+        Adas_FarLgtCmd: 1
+        Adas_HornCmd: 1
+        Adas_LampEnable: 1
+        Adas_NearLgtCmd: 1
+        Adas_NightLgtCmd: 1
+        Adas_R_FogLgtCmd: 1
+        Adas_TurnLgtCmd: 1
